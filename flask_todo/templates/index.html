@@ -1,0 +1,15 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}To-Do Manager!{% endblock %}
+
+{% block content %}
+<h1>To do App  B O Y Z</h1>
+<form method="post">
+  What did you get done today my guy?:<br>
+  <input type="text" name="todo">
+  <input type="submit" value="Submit">
+</form>
+
+<p>The todos are: <br>{{ list }}</p>
+
+{% endblock %}
