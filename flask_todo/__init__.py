@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from . import db
 #form, update, list itself
 
 list = []
@@ -18,5 +19,11 @@ def create_app():
             list.append(todoz)
 
             return render_template('index.html', list=list)
+
+    @app.route('/database')
+    def datab():
+
+        get_db()
+#        close_db()
 
     return app
