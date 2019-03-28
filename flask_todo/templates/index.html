@@ -10,6 +10,11 @@
   <input type="submit" value="Submit">
 </form>
 
-<p>The todos are: <br>{{ list }}</p>
-
+<ul>
+{% if list %}
+{% for item in list -%}
+    <li>{{ item }}</li><br>
+{%- endfor %}
+{% endif %}
+</ul>
 {% endblock %}
